@@ -14,15 +14,15 @@ const HeroContent = () => {
     const [movieinfo3, setMovieInfo3] = useState([]);
 
     const movieContainer1 = async () => {
-        const data = await axios.get(`http://www.omdbapi.com/?apikey=${apikey}&i=tt37455270`)
+        const data = await axios.get(`https://www.omdbapi.com/?apikey=${apikey}&i=tt37455270`)
         setMovieInfo1(data.data)
     }
     const movieContainer2 = async () => {
-        const data = await axios.get(`http://www.omdbapi.com/?apikey=${apikey}&i=tt18923754`)
+        const data = await axios.get(`https://www.omdbapi.com/?apikey=${apikey}&i=tt18923754`)
         setMovieInfo2(data.data)
     }
     const movieContainer3 = async () => {
-        const data = await axios.get(`http://www.omdbapi.com/?apikey=${apikey}&i=tt14513804`)
+        const data = await axios.get(`https://www.omdbapi.com/?apikey=${apikey}&i=tt14513804`)
         setMovieInfo3(data.data)
     }
 
