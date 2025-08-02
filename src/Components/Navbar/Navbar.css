@@ -1,0 +1,29 @@
+.search-bar input::placeholder{
+    color: #fff;
+}
+
+.nav-link.active{
+    color: #fff;
+}
+
+.navbar {
+    position: absolute;
+    z-index: 1;
+}
+
+.navbar-brand{
+    font-family: "Playwrite HU", cursive;
+  font-optical-sizing: auto;
+  background: linear-gradient(to right , yellow , lightgray);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+@media screen and (max-width:768px) {
+    .navbar-brand{
+        font-size: 20px;
+    }
+}

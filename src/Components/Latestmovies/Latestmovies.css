@@ -1,0 +1,21 @@
+    .latestMovies:hover{
+        transform: scale(1.05);
+        transition: 0.5s;
+    }
+
+
+    @media screen and (max-width:768px) {
+          .latestmovies-container{
+        display: flex !important;
+        justify-content: space-around !important;
+    }
+    }
+@media screen and (max-width: 1000px) {
+    .latestMovies{
+        height: 350px !important;
+        width: 150px !important;
+    }
+    .latestMovies img{
+        height: 60% !important;
+    }
+}
