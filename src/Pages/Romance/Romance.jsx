@@ -7,6 +7,8 @@ import axios from 'axios'
 import { NavLink } from 'react-router-dom'
 import Footer from '../../Components/Footer/Footer'
 
+const apikey = import.meta.env.VITE_OMDB_API_KEY;
+
 
 const Romance = () => {
 
@@ -14,7 +16,7 @@ const Romance = () => {
     // console.log("Latest : ", latestmoviesData)
 
     const romancemoviedata = async () => {
-        const data = await axios.get("https://www.omdbapi.com/?apikey=33acb252&s=sex")
+        const data = await axios.get(`https://www.omdbapi.com/?apikey=${apikey}&s=sex`)
         setRomanceMovies(data.data.Search);
     }
 

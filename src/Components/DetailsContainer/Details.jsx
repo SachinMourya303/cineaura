@@ -7,6 +7,7 @@ import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import Footer from '../../Components/Footer/Footer'
 
+const apikey = import.meta.env.VITE_OMDB_API_KEY;
 
 const Details = () => {
 
@@ -17,7 +18,7 @@ const Details = () => {
     // console.log("Latest : ", latestmoviesData)
 
     const getMovie = async () => {
-        const data = await axios.get(`https://www.omdbapi.com/?apikey=33acb252&i=${id}`)
+        const data = await axios.get(`https://www.omdbapi.com/?apikey=${apikey}&i=${id}`)
         setDetailsData(data.data);
     }
 

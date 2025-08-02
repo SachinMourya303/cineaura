@@ -6,6 +6,8 @@ import 'bootstrap-icons/font/bootstrap-icons.min.css'
 import axios from 'axios'
 import { NavLink } from 'react-router-dom'
 
+const apikey = import.meta.env.VITE_OMDB_API_KEY;
+
 
 const Latestmovies = () => {
 
@@ -13,7 +15,7 @@ const Latestmovies = () => {
     // console.log("Latest : ", latestmoviesData)
 
     const latestMovies = async () => {
-        const data = await axios.get("https://www.omdbapi.com/?apikey=33acb252&s=resident evil")
+        const data = await axios.get(`https://www.omdbapi.com/?apikey=${apikey}&s=fast`)
         setLatestMoviesData(data.data.Search);
     }
     

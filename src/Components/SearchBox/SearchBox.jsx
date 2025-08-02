@@ -18,7 +18,7 @@ const SearchBox = () => {
 
         <div className='col-12 mt-5'>
 
-                <div className='col-12 d-flex justify-content-center'>
+                <div className='col-12 d-none d-md-flex justify-content-center'>
                     <ul className='col-10 col-md-7 d-flex justify-content-between list-unstyled overflow-x-auto gap-2 gap-md-0'>
                     <li className="nav-item">
                         <NavLink to="/" className="nav-link">Home</NavLink>

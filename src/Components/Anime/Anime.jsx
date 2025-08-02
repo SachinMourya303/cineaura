@@ -6,13 +6,15 @@ import 'bootstrap-icons/font/bootstrap-icons.min.css'
 import axios from 'axios'
 import { NavLink } from 'react-router-dom'
 
+const apikey = import.meta.env.VITE_OMDB_API_KEY;
+
 const Anime = () => {
 
     const [latestAnimeData, setLatestAnimeData] = useState([]);
     // console.log("Latest : ", latestmoviesData)
 
     const latestanime = async () => {
-        const data = await axios.get("https://www.omdbapi.com/?apikey=33acb252&s=kung fu panda")
+        const data = await axios.get(`https://www.omdbapi.com/?apikey=${apikey}&s=kung fu panda`)
         setLatestAnimeData(data.data.Search);
     }
 

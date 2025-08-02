@@ -8,6 +8,8 @@ import { NavLink, useParams } from 'react-router-dom'
 import SearchBox from '../SearchBox/SearchBox'
 import Footer from '../Footer/Footer'
 
+const apikey = import.meta.env.VITE_OMDB_API_KEY;
+
 
 const SearchedMovie = () => {
 
@@ -17,7 +19,7 @@ const SearchedMovie = () => {
     const [searchedmoviesData , setSerchedMoviesData] = useState([]);
 
     const searchedMovies = async () => {
-    const response = await axios.get(`https://www.omdbapi.com/?apikey=33acb252&s=${name}`);
+    const response = await axios.get(`https://www.omdbapi.com/?apikey=${apikey}&s=${name}`);
     if (response.data.Response === "True") {
         setSerchedMoviesData(response.data.Search);
     } else {
@@ -31,9 +33,9 @@ const SearchedMovie = () => {
     }, [name]);
 
   return (
-    <div>
+    <div style={{paddingTop:"80px"}}>
         <div className='d-block d-md-none'><SearchBox/></div>
-        <div className="container-fluid" style={{paddingTop:"80px"}}>
+        <div className="container-fluid mt-3">
 
             <div className='latestmovies-container d-flex justify-content-start gap-3 flex-wrap'>
                 {
